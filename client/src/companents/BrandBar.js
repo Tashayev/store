@@ -7,17 +7,17 @@ const BrandBar = observer(() => {
     const {device} = useContext(Context)
     return (
         <Form className="d-flex">
-            {device.brands.map(brand =>//28п.
-                    // Пробежимся с помощью мап по брендам и для каждого брэнда передаем карточки
+            {device.brands.map(brand =>
+                    
             <Card
                 style={{cursor:'pointer'}}
                 key={brand.id}
                 className="p-3"
-                onClick={() => device.setSelectedBrand(brand)}//30п. Вешаем слушатель selectedBrand из DeviceStore.js из контекста index.js. И выберем тип
-                 border={brand.id === device.selectedBrand.id ? 'danger' : 'light'}//30п. Здесь нет проб Актив, по этому выделение с помощью borderости .
-                // Сравниваем id с выбранным, в зависимости от него отражаем цвет рамки.
+                onClick={() => device.setSelectedBrand(brand)}
+                 border={brand.id === device.selectedBrand.id ? 'danger' : 'light'}
+                
             >
-                {brand.name}{/*Название брэнда*/}
+                {brand.name}
             </Card>
                 )}
         </Form>
