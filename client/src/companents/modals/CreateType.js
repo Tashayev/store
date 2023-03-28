@@ -10,12 +10,12 @@ const CreateType = ({show, onHide}) => {
     const [value, setValue] = useState('')
     //58п. Создаем состояние с помощью useState
     const addType = () => {
-        createType({name: value}).then(data => {//58п. Параметром запроса передаем имя, который получаем из состояния
-            setValue('')//58п. После того как функция отработала успешна, в инпуте возвращаем пустую строку
-            onHide()// и закрываем
+        createType({name: value}).then(data => {
+            setValue('')
+            onHide()
         })
     }
-    return (// Вставляем из bootstrap modal окна
+    return (
         <Modal
             show={show}
             onHide={onHide}
@@ -30,7 +30,7 @@ const CreateType = ({show, onHide}) => {
                 <Form>
                     <Form.Control
                         value={value}
-                        onChange={e => setValue(e.target.value)}//58п. Слушатель событие изменяем на то, что находится в инпуте
+                        onChange={e => setValue(e.target.value)}
                         placeholder={"Введите название типа"}
                     />
                 </Form>
