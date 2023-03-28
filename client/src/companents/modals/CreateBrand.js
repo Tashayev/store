@@ -1,4 +1,4 @@
-//39п. rsc+tab
+
 import React, {useState} from 'react';
 import {Button,  Form, Modal} from "react-bootstrap";
 import {createBrand, createType} from "../../http/deviceAPI";
@@ -14,7 +14,7 @@ const CreateBrand = ({show, onHide}) => {
             onHide()
         })
     }
-    return (// Вставляем из bootstrap modal окна
+    return (
         <Modal
             show={show}
             onHide={onHide}
