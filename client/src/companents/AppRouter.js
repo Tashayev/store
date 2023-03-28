@@ -7,9 +7,7 @@ import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 
 const AppRouter = observer(() => {
-    const {user} = useContext(Context)// 17п. Вместо временной заглушки, импорт из index.js
-    //14п. const isAuth = falseВременная проверка(заглушка), в дальнейшем это будет делаться через сервер с помощи токена
-    console.log(user)
+    const {user} = useContext(Context)
     return (
             <Routes>
                 {user.isAuth && authRoutes.map(({path, Component}) =>
