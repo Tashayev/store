@@ -4,14 +4,14 @@ import {Card, Col, Image} from "react-bootstrap";
 import star from '../assets/star.png'
 import {useNavigate} from "react-router-dom";
 import {DEVICE_ROUTE} from "../utils/consts";
-const DeviceItem = ({device}) => {// Передаем текущий элемент итерации с DeviceList
+const DeviceItem = ({device}) => {
     const history = useNavigate()
-    console.log(history)
+    
     return (
         <Col md={3} className="mt-3" onClick={() => history(DEVICE_ROUTE + '/' + device.id)}>
-            {/*35п. С помощью навигатора при нажатьи перемещаемся на нужный товар в DevicePage.js*/}
-            <Card style={{width: 150, cursor: 'pointer'}} border={"light"}>  {/* 35п. Карт используем как рамку*/}
-                <Image width={150} height={150} src={process.env.REACT_APP_API_URL + device.img}/>{/*56п.  Нужно добавить URL сервера*/}
+            
+            <Card style={{width: 150, cursor: 'pointer'}} border={"light"}>  
+                <Image width={150} height={150} src={process.env.REACT_APP_API_URL + device.img}/>
                 <div className="text-black-50 mt-1 d-flex justify-content-between align-items-center">
                     <div>Samsung...</div>
                     <div className="d-flex align-items-center">
